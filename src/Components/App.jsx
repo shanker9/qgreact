@@ -16,34 +16,41 @@ class App extends React.Component {
                 type: 'row',
                 content: [{
                     type: 'column',
+                    width: 60,
                     content: [
                         {
+                            id: 'blotter',
                             title: 'Blotter',
                             type: 'react-component',
                             component: 'blotter',
                             props: { rowHeight: 20, subscriptionTopic: 'ProductUI' },
-                        },
-                        {
-                            title: 'Object Browser',
-                            type: 'react-component',
-                            component: 'objectbrowser',
-                            props: { data: {} }
+                            isClosable: false,
                         }
                     ]
                 }, {
                     type: 'column',
                     content: [
                         {
+                            id:'graph',
                             title: 'Graph',
                             type: 'react-component',
                             component: 'graph',
-                            props: { qGraphData: {} }
+                            props: { qGraphData: {} },
+                            isClosable: false
                         },
                         {
                             title: 'Chart',
                             type: 'react-component',
                             component: 'chart',
-                            props: { rowHeight: 20, subscriptionTopic: 'ProductUI' }
+                            props: { rowHeight: 20, subscriptionTopic: 'ProductUI' },
+                            isClosable: false
+                        },
+                        {
+                            title: 'Object Browser',
+                            type: 'react-component',
+                            component: 'objectbrowser',
+                            props: { data: {} },
+                            isClosable: false
                         }
                     ]
                 }]
