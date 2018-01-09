@@ -1,0 +1,363 @@
+    :root {
+        --tablerowcolor : rgb(249, 247, 247);
+        --headerrowcolor : rgb(221, 221, 221);
+        --headerrowhovercolor : rgb(243, 243, 243);
+    }
+    
+    .appEnclosingDiv{
+        position: absolute;
+        width: 98vw;
+        height: 95vh;
+        background-color: rgb(226, 226, 226);
+        padding: 5px;
+    }
+    
+    .appContainer{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: white;
+    }
+    
+    .gridAndChartContainer {
+        flex: 1;
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .graphAndObjectBrowserContainer{
+        flex: 1;
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .tablecontainer {
+        height: 98%;
+        border: 1px solid lightgrey;
+        border-collapse: collapse;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blottercontainer{
+        height: stretch;
+        display: flex;
+        flex-direction: column;
+        margin: 1px;
+        margin-top: 5px;
+    }
+
+    .blottertop {
+        display: flex;
+        margin-bottom: 12px;
+    }
+    
+    .blotterinfocontainer {
+        align-items : center;
+        padding-right: 2px;
+        flex: 0.5;
+    }
+
+    .cleargrouping {
+        background-color: rgb(197, 54, 54);
+        color: white;
+    }
+
+    .temporalContainer {
+        flex : 0.7;
+    }
+
+    .temporalUIblock {
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+    }
+
+    .temporalslider {
+        flex: 1;
+        vertical-align: middle;
+    }
+
+    .temporalButton {
+        background-color: rgb(0, 134, 56);
+        color: white;
+    }
+
+    .dragtobar{
+        flex : 1;
+        display: flex;
+        border: 1px groove;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: grey;
+    }
+
+    .groupedColumn {
+        color: black;
+        border: 1px solid lightgrey;
+        padding: 1px;
+        box-sizing: border-box;
+        background: linear-gradient(rgb(208, 212, 212),rgb(255, 255, 255), rgb(208, 212, 212));
+    }
+
+
+    .gridContainerDiv {
+        height: stretch;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header {
+        font-size: 15px;
+        color: #c00000;
+    }
+
+    .headerDiv {
+        min-height: fit-content;
+        overflow-x: hidden;     
+        overflow-y: scroll;
+        background-color: var(--headerrowcolor);
+        /* background: linear-gradient(rgb(216, 216, 216),rgb(255, 255, 255), rgb(216, 216, 216)); */
+    }
+
+    .sortableHeaderContainer {
+        min-height: fit-content;
+        overflow-x: hidden;     
+        overflow-y: scroll;
+        background: linear-gradient(rgb(208, 212, 212),rgb(255, 255, 255), rgb(208, 212, 212));        
+    }
+
+    .table {
+        border-collapse: collapse;
+    }
+
+    .tableHeaderRow{
+        height: 20px;
+        text-align: center;
+        cursor: pointer;        
+    }
+
+    .th:hover {
+        background-color: var(--headerrowhovercolor);
+    }
+
+    .groupExpansionHeaderBox{
+        min-width: 40px;
+        border: 1px solid lightgray;
+        border-bottom: 0px;
+        border-right: 0px;
+        box-sizing: border-box;
+    }
+
+    .my-handle {
+        float : right
+    }
+
+    .my-handle:hover {
+        cursor: move;
+    }
+
+    .th {
+        display: table-cell;
+        border: 1px solid lightgray;
+        border-bottom: 0px;
+        font-size: 12px;
+        font-weight: 300;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        vertical-align: middle;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .sortable-header-row {
+        padding: 0px;
+        display: table-row;
+    }
+    
+    .tableDiv {
+        /* height: -webkit-fill-available; */
+        height: stretch;
+        overflow-y: scroll;
+        overflow-x: auto;
+    }
+
+    .tableDiv::-webkit-scrollbar-track
+    {
+        background-color: rgb(235, 232, 232);
+    }
+    
+    .tableDiv::-webkit-scrollbar
+    {
+        width: 12px;
+        height: 12px;
+        background-color: #F5F5F5;
+    }
+    
+    .tableDiv::-webkit-scrollbar-thumb
+    {
+        background-color: #b3b5b8;
+    }
+
+    .headerDiv::-webkit-scrollbar-track {
+        /* background-color: rgb(221, 221, 221); */
+        background-color: var(--headerrowcolor);
+        opacity: 0;
+    }
+
+    .headerDiv::-webkit-scrollbar
+    {
+        width: 12px;
+        height: 12px;
+        background-color: #F5F5F5;
+    }
+    
+    .headerDiv::-webkit-scrollbar-thumb
+    {
+        background-color: #307dd4;
+    }
+
+
+    .tableGridRow {
+        /* border-collapse: collapse; */
+        display: table-row;
+        height: 20px;
+    }
+
+    .tableGridRow:hover {
+        cursor: default;
+    }
+
+    .tableGridRow:nth-child(even) {
+        background-color: rgb(249, 247, 247);
+    }
+
+    .tableRow {
+        background-color: var(--tablerowcolor);
+        display: table-row;
+        height: 20px;
+    }
+
+    .tableRow:hover {
+        cursor: default;
+    }
+
+    .td {
+        display: table-cell;
+        border: 1px solid lightgray;
+        background-color: inherit;
+        font-size: 75%;
+        font-weight: 300;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       -webkit-transition: background-color 1s;
+        -moz-transition: background-color 1s;
+        transition: background-color 1s;       
+    }
+
+    .cellDiv {
+        width: 190px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+
+    .headercelldiv {
+        width: 190px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .columnlabelbox {
+        flex: 1;
+    }
+
+    .tdGroupedView {
+        display: table-cell;
+        border: 1px solid lightgray;
+        text-align: center;
+        font-size: 100%;
+        font-weight: bold;
+        min-width: 40px;
+        box-sizing: border-box;
+        outline-color : lightgray;
+        outline-width : 1.3px; 
+        background-color: inherit;
+    }
+
+    .leftAlignContentCells {
+        align-content: left;
+        align-items : left;
+    }
+
+    .button {
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: 10px;
+        padding: 5px;
+        font-weight: 300;
+        cursor: pointer;
+        margin-left: 10px;
+        float: right;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .chartContainer{
+        width: stretch;
+        height: stretch;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid lightgrey;
+    }
+
+    /* Graph */
+
+    .graphContainer{
+        width: stretch;
+        height: stretch;
+        background-color: #FFFFFF;        
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .dagreContainer {
+        flex: 1;
+        height: 98%;
+        box-sizing: border-box;
+        border-top: 1px solid lightgrey;
+    }
+
+    .objectBrowserContainer{
+        flex: 1;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .objectBrowser{
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    .ComponentTitle{
+        border: 0.5px solid rgb(163, 159, 159);
+        margin: 2px 4px 4px 2px;
+        background-color: #F0F3F5;
+        color: #0C0101;
+        font-family: Geneva, Tahoma, sans-serif;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    svg:hover {
+        cursor: default;
+    }
