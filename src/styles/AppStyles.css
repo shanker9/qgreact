@@ -44,11 +44,11 @@
         display: flex;
         flex-direction: column;
         margin: 1px;
-        margin-top: 5px;
     }
 
     .blottertop {
         display: flex;
+        margin-top: 5px;
         margin-bottom: 12px;
     }
     
@@ -107,6 +107,7 @@
         height: stretch;
         display: flex;
         flex-direction: column;
+        margin-bottom: 2px;
     }
     
     .header {

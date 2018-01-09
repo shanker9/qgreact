@@ -14,8 +14,6 @@ class ObjectBrowser extends Component {
         this.state = {
             data: this.props.data
         }
-
-        this.props.reference(this);                
     }
 
     updateData(vertextData) {

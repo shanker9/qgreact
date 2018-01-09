@@ -106,7 +106,7 @@ class TableRow extends React.Component {
 
     getCellDataForKey(data, field) {
         let result = data[field];
-        if(!result) return result;
+        if(typeof result === 'object' || !result) return '';
 
         switch(field){
             case RowFields.RECEIVELEG:

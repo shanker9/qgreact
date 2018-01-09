@@ -180,18 +180,18 @@ export default class TableController {
         let orderby = `/${this.groupingColumnsByLevel[0]}`;
         let numericValueColumns = ['rho10bps', 'vega1pt', 'delta1pct', 'gamma1pct', 'payNotional', 'receiveNotional', 'price', 'receiveLeg', 'payLeg'];
         let maxValueColumns = ['lastUpdated', 'vertex'];
-        // let nonNumericColumns = ['counterparty', 'receiveIndex', 'payCurrency', 'payDiscountCurve', 'receiveDiscountCurve', 'receiveCurrency', 'amerOrEuro', 'putOrCall', 'contractSize', 'strike'];
+        let nonNumericColumns = ['counterparty', 'receiveIndex','underlier'];
 
         let groupingString = this.groupingColumnsByLevel.map((item, i) => `${this.getJSONPathForColumnKey(item)}`).join(',');
 
         let groupingColumnsCopy = this.groupingColumnsByLevel.slice(0);
 
         let groupingColumnsJsonpathArray = groupingColumnsCopy.map(item => this.getJSONPathForColumnKey(item));
-        // let nonNumericColumnsJsonpathArray = nonNumericColumns.map(item => this.getJSONPathForColumnKey(item));
+        let nonNumericColumnsJsonpathArray = nonNumericColumns.map(item => this.getJSONPathForColumnKey(item));
         let dateValueColumnsJsonpathArray = maxValueColumns.map(item => this.getJSONPathForColumnKey(item));
         let aggregateColumnsJsonpathArray = numericValueColumns.map(item => this.getJSONPathForColumnKey(item));
 
-        let projectionsArray = groupingColumnsJsonpathArray.concat(aggregateColumnsJsonpathArray);
+        let projectionsArray = groupingColumnsJsonpathArray.concat(aggregateColumnsJsonpathArray,nonNumericColumnsJsonpathArray);
         projectionsArray.sort();
 
         projectionsArray = projectionsArray.map(path => {

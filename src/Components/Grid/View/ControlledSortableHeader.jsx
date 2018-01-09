@@ -45,7 +45,7 @@ class ControlledSortableHeader extends Component {
     getHeaderRow() {
         return this.state.isGroupedView ? (
             <div id="scrollableHeaderDiv" className='headerDiv' onScroll={this.scrollEventHandler}>
-                <div>
+                <div style={{display:'table',borderCollapse:'collapse'}}>
                     <div>
                         <Sortable tag='div' className='sortable-header-row'
                             options={{ animation: 300, handle: '.my-handle', filter: '.groupExpansionHeaderBox' }}
